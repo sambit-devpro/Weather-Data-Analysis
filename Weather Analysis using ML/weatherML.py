@@ -65,3 +65,14 @@ plt.scatter(x=training_steps, y=loss_values)
 plt.xlabel('Training steps (Epochs = steps / 2)')
 plt.ylabel('Loss (SSE)')
 plt.show()
+pred = regressor.predict(input_fn=wx_input_fn(X_test,
+                                              num_epochs=1,
+                                              shuffle=False))
+predictions = np.array([p['predictions'][0] for p in pred])
+
+print("The Explained Variance: %.2f" % explained_variance_score(
+                                            y_test, predictions))  
+print("The Mean Absolute Error: %.2f degrees Celcius" % mean_absolute_error(
+                                            y_test, predictions))  
+print("The Median Absolute Error: %.2f degrees Celcius" % median_absolute_error(
+                                            y_test, predictions))
