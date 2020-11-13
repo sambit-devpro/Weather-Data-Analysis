@@ -1,1 +1,2 @@
 # Weather-Data-Analysis
+The program analyses the available information about weather that is available in a csv file. It comprehends the data and produces a chart with forecasting parameters. What is different about it is that it has a graph that shows very clearly the loss function attaining lower and lower values with an increase in the number of epochs that the program runs. Then finally, we predict the error in the various scales.
